@@ -6,11 +6,11 @@ public class sum {
             for (int j = i + 1; j < 4; j++) {
                 if (a[i] + a[j] == 10) {
                     int sum=a[i]+a[j];
-                    System.out.println("True the sum is" +sum);
+                    System.out.println("True the sum is " +sum);
                 }
             else{
                     int sum=a[i]+a[j];
-                    System.out.println("False the sum is" +sum);
+                    System.out.println("False the sum is " +sum);
                 }
 
             }
