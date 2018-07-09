@@ -10,7 +10,7 @@ public class Main {
             int[] a = new int[n];
             int max = a[0];
             System.out.print("Enter the elements");
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i< n; i++) {
                 a[i] = sc.nextInt();
             }
             for (int i = 0; i < n; i++)
