@@ -6,7 +6,7 @@ public class SecLar {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] a = new int[n];
-        System.out.print("Enter the array elemnts:");
+        System.out.print("Enter the array elements:");
                 for(int k=0;k<n;k++){
                     a[k]=sc.nextInt();
                 }
