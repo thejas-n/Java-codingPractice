@@ -13,7 +13,7 @@ public class Bt {
 
                 while(true){
                     parent=present;
-                    if(value<parent.value){
+                    if(value<present.value){
                         present=present.lc;
                         if (present==null){
                              parent.lc=newNode;
@@ -30,10 +30,21 @@ public class Bt {
             }
         }
     }
+
+    public void printleaf(node present) {
+        if(present!=null){
+            if (present.lc == null && present.rc == null) {
+                System.out.println(present.value + " " + "is a leaf node");
+            }
+            printleaf(present.lc);
+            printleaf(present.rc);
+        }
+    }
+
     public void inorder(node present) {
         if (present != null) {
+            System.out.println(present.value);
             inorder(present.lc);
-            System.out.println(present);
             inorder(present.rc);
         }
     }
@@ -47,16 +58,16 @@ public class Bt {
         binarytree.addnode(80);
         binarytree.addnode(150);
         binarytree.addnode(123);
-        binarytree.inorder(binarytree.root);
+        binarytree.addnode(173);
+        binarytree.printleaf(binarytree.root);
     }
 }
 class node{
     int value;
-
     node lc;
     node rc;
 
     node(int value){
-        value=this.value;
+        this.value=value;
     }
 }
