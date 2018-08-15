@@ -31,16 +31,6 @@ public class Bt {
         }
     }
 
-    public void printleaf(node present) {
-        if(present!=null){
-            if (present.lc == null && present.rc == null) {
-                System.out.println(present.value + " " + "is a leaf node");
-            }
-            printleaf(present.lc);
-            printleaf(present.rc);
-        }
-    }
-
     public void inorder(node present) {
         if (present != null) {
             System.out.println(present.value);
@@ -59,7 +49,7 @@ public class Bt {
         binarytree.addnode(150);
         binarytree.addnode(123);
         binarytree.addnode(173);
-        binarytree.printleaf(binarytree.root);
+        binarytree.inorder(binarytree.root);
     }
 }
 class node{
